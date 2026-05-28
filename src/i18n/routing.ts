@@ -53,6 +53,10 @@ export const routing = defineRouting({
       tr: '/zaman/yas-hesaplayici',
       en: '/time/age-calculator',
     },
+    '/mutfak/olcu-birimi-donusturucu': {
+      tr: '/mutfak/olcu-birimi-donusturucu',
+      en: '/kitchen/measurement-converter',
+    },
     '/el-sanatlari/ip-yumak-hesaplayici': {
       tr: '/el-sanatlari/ip-yumak-hesaplayici',
       en: '/crafts/yarn-amount-calculator',

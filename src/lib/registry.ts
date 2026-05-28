@@ -112,6 +112,20 @@ export const calculatorRegistry: CalculatorEntry[] = [
     status: 'live',
   },
   {
+    id: 'kitchen-converter',
+    category: 'mutfak',
+    icon: 'CookingPot',
+    slugs: {
+      tr: 'mutfak/olcu-birimi-donusturucu',
+      en: 'kitchen/measurement-converter',
+    },
+    titleKey: 'kitchenConverter.title',
+    descriptionKey: 'kitchenConverter.description',
+    keywords: ['bardak kaşık dönüşüm', '1 bardak kaç kaşık', 'mutfak ölçü', 'cup to tablespoon', 'un kaç gram'],
+    hasHistory: false,
+    status: 'live',
+  },
+  {
     id: 'yarn-amount',
     category: 'el-sanatlari',
     icon: 'Scissors',
