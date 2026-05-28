@@ -1,0 +1,29 @@
+# Hesapla — Everyday Calculation PWA
+
+Hesapla is a high-performance, privacy-first Progressive Web App (PWA) providing 
+essential calculation tools for daily use.
+
+## Core Mandates
+- **Zero Server-Side Storage:** User data (calculations, history, favorites) 
+  never leaves the device.
+- **Privacy by Design:** No tracking, no user accounts, and fully compliant 
+  with KVKK (Turkey) and GDPR (EU).
+- **Offline Capabilities:** Fully functional without internet access via 
+  Service Workers (Serwist).
+- **Accessibility:** Built with Tailwind CSS 4 and shadcn/ui for optimal 
+  mobile experience.
+
+## Language Support
+- **Turkish (tr):** Primary locale.
+- **English (en):** International locale.
+
+## Calculator Registry (Live)
+- **VAT (KDV) Calculator:** `/tr/para/kdv-hesaplayici` | `/en/money/vat-calculator`
+- **Calorie (BMR/TDEE) Calculator:** `/tr/saglik/kalori-hesaplayici` | `/en/health/calorie-calculator`
+- **Knitting Cost Calculator:** `/tr/el-sanatlari/orgu-maliyet-hesaplayici` | `/en/crafts/knitting-cost-calculator`
+
+## Technical Foundation
+- **Framework:** Next.js 15 (App Router).
+- **Styling:** Tailwind CSS 4.
+- **Database:** Dexie.js (Client-side IndexedDB).
+- **SEO/GEO:** Dynamic sitemaps, JSON-LD schemas, and AI-optimized content.

@@ -1,0 +1,62 @@
+# ============================================================================
+# docker-compose.yml — Hem geliştirme hem üretim için servisler
+# Bu dosya proje KÖKÜNE konur (calc-pwa/docker-compose.yml).
+#
+# KULLANIM:
+#   Geliştirme:   docker compose up dev
+#   Üretim testi: docker compose up prod
+#   Durdurma:     docker compose down
+# ============================================================================
+
+services:
+  # ----- GELİŞTİRME: hot-reload, kodu canlı bağlar -----
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: calc-pwa-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      # Yerel kodu konteynere bağla (değişiklikler anında yansır)
+      - .:/app
+      # node_modules ve .next konteynerin kendininki kalsın (çakışma önler)
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - WATCHPACK_POLLING=true
+    env_file:
+      - .env.local
+
+  # ----- ÜRETİM: standalone, küçük imaj, sunucuya gidecek olan -----
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: calc-pwa-prod
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.production
+    restart: unless-stopped
+
+# ----------------------------------------------------------------------------
+# İLERİDE AI MODELİ EKLERSEN (şimdilik yorum satırı, hazır dursun):
+# Kendi modelini sunucuda çalıştırmak istersen buraya bir servis eklersin.
+# Örnek (Ollama ile yerel model):
+#
+#   ollama:
+#     image: ollama/ollama:latest
+#     container_name: calc-pwa-ollama
+#     ports:
+#       - "11434:11434"
+#     volumes:
+#       - ollama-data:/root/.ollama
+#     restart: unless-stopped
+#
+# volumes:
+#   ollama-data:
+# ----------------------------------------------------------------------------

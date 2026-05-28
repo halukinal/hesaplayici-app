@@ -1,0 +1,20 @@
+# ============================================================================
+# Dockerfile.dev — Geliştirme (development) için, hot-reload destekli
+# Kod değiştikçe otomatik yenilenir. Üretimde KULLANILMAZ.
+# Bu dosya proje KÖKÜNE konur (calc-pwa/Dockerfile.dev).
+# ============================================================================
+
+FROM node:22-alpine
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+ENV NEXT_TELEMETRY_DISABLED=1
+# Docker içinde dosya değişikliklerinin algılanması için (özellikle Mac/Windows)
+ENV WATCHPACK_POLLING=true
+
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Kaynak kod compose tarafından "volume" olarak bağlanır, burada kopyalamaya gerek yok
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
