@@ -29,6 +29,10 @@ export const routing = defineRouting({
       tr: '/kayitlarim',
       en: '/my-records',
     },
+    '/para/maas-hesaplayici': {
+      tr: '/para/maas-hesaplayici',
+      en: '/money/salary-calculator',
+    },
     '/para/kdv-hesaplayici': {
       tr: '/para/kdv-hesaplayici',
       en: '/money/vat-calculator',

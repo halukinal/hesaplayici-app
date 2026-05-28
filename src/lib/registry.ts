@@ -55,6 +55,20 @@ export const calculatorRegistry: CalculatorEntry[] = [
     status: 'live',
   },
   {
+    id: 'salary',
+    category: 'para',
+    icon: 'Banknote',
+    slugs: {
+      tr: 'para/maas-hesaplayici',
+      en: 'money/salary-calculator',
+    },
+    titleKey: 'salary.title',
+    descriptionKey: 'salary.description',
+    keywords: ['maaş hesaplama', 'net brüt maaş', 'sgk hesaplama', 'salary calculator turkey', 'maas hesaplayici'],
+    hasHistory: false,
+    status: 'live',
+  },
+  {
     id: 'knitting-cost',
     category: 'el-sanatlari',
     icon: 'Scissors',
