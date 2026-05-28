@@ -5,14 +5,19 @@ export type KitchenUnit =
   | 'tatli-kasigi'    // 10ml
   | 'cay-kasigi'      // 5ml
   | 'litre'           // 1000ml
-  | 'ml';             // 1ml
+  | 'ml'              // 1ml
+  | 'gram';           // ingredient-dependent
 
 export type KitchenIngredient =
   | 'su' | 'sut' | 'un' | 'seker' | 'pudra-sekeri'
   | 'tuz' | 'tereyagi' | 'zeytinyagi' | 'pirinc'
   | 'kakao' | 'nisasta';
 
-export const UNIT_ML: Record<KitchenUnit, number> = {
+export const VOLUME_UNITS: Exclude<KitchenUnit, 'gram'>[] = [
+  'litre', 'su-bardagi', 'cay-bardagi', 'yemek-kasigi', 'tatli-kasigi', 'cay-kasigi', 'ml',
+];
+
+export const UNIT_ML: Record<Exclude<KitchenUnit, 'gram'>, number> = {
   'su-bardagi': 200,
   'cay-bardagi': 100,
   'yemek-kasigi': 15,
@@ -40,8 +45,9 @@ export const INGREDIENT_DENSITY: Record<KitchenIngredient, number> = {
 export interface ConversionResult {
   fromAmount: number;
   fromUnit: KitchenUnit;
+  fromIngredient?: KitchenIngredient;
   totalMl: number;
-  conversions: {unit: KitchenUnit; amount: number}[];
+  conversions: {unit: Exclude<KitchenUnit, 'gram'>; amount: number}[];
   gramsBy?: {ingredient: KitchenIngredient; grams: number}[];
 }
 
@@ -49,25 +55,35 @@ function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
 
-const ALL_UNITS: KitchenUnit[] = [
-  'litre', 'su-bardagi', 'cay-bardagi', 'yemek-kasigi', 'tatli-kasigi', 'cay-kasigi', 'ml',
-];
-
 export function convertKitchenUnit(
   amount: number,
   fromUnit: KitchenUnit,
-  showIngredients?: KitchenIngredient[],
+  options: {showIngredients?: KitchenIngredient[]; fromIngredient?: KitchenIngredient} = {},
 ): ConversionResult {
-  const totalMl = amount * UNIT_ML[fromUnit];
+  let totalMl: number;
 
-  const conversions = ALL_UNITS
+  if (fromUnit === 'gram') {
+    const density = INGREDIENT_DENSITY[options.fromIngredient ?? 'su'];
+    totalMl = amount / density;
+  } else {
+    totalMl = amount * UNIT_ML[fromUnit];
+  }
+
+  const conversions = VOLUME_UNITS
     .filter((u) => u !== fromUnit)
     .map((unit) => ({unit, amount: round2(totalMl / UNIT_ML[unit])}));
 
-  const gramsBy = showIngredients?.map((ingredient) => ({
+  const gramsBy = options.showIngredients?.map((ingredient) => ({
     ingredient,
     grams: Math.round(totalMl * INGREDIENT_DENSITY[ingredient]),
   }));
 
-  return {fromAmount: amount, fromUnit, totalMl: round2(totalMl), conversions, gramsBy};
+  return {
+    fromAmount: amount,
+    fromUnit,
+    fromIngredient: fromUnit === 'gram' ? options.fromIngredient : undefined,
+    totalMl: round2(totalMl),
+    conversions,
+    gramsBy,
+  };
 }
