@@ -3,6 +3,7 @@
 import {useLocale, useTranslations} from 'next-intl';
 import {useRouter, usePathname} from '@/i18n/navigation';
 import {Calculator} from 'lucide-react';
+import NavMenu from './NavMenu';
 
 export default function Header() {
   const t = useTranslations('meta');
@@ -17,6 +18,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white border-b border-[#E2E8F0] px-4 py-3 flex items-center justify-between">
       <div className="flex items-center gap-2">
+        <NavMenu />
         <Calculator className="text-[#2563EB]" size={24} aria-hidden />
         <span className="font-bold text-[#0F172A] text-lg">{t('siteName')}</span>
       </div>
