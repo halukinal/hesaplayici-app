@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" style="font-family: system-ui, sans-serif;">
+  <title>Malzeme Gramaj Tablosu</title>
+  <desc>1 Su bardağının farklı malzemelerde kaç grama denk geldiğini gösteren tablo.</desc>
+
+  <rect width="600" height="360" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Başlık -->
+  <rect x="0" y="0" width="600" height="40" rx="16" fill="#EFF6FF"/>
+  <text x="20" y="25" font-weight="bold" font-size="14" fill="#2563EB">1 Su Bardağı (200ml) Hangi Malzemede Kaç Gram?</text>
+
+  <g transform="translate(0, 40)">
+    <!-- Satır 1: Su -->
+    <rect x="0" y="0" width="600" height="40" fill="#FFFFFF"/>
+    <text x="20" y="25" font-size="16">💧</text>
+    <text x="50" y="25" font-weight="bold" font-size="14" fill="#0F172A">Su / Sıvı Yağ</text>
+    <rect x="180" y="10" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 200/240 * 250 = 208 -->
+    <rect x="180" y="10" width="208" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="25" font-weight="bold" font-size="14" fill="#0F172A">200 g</text>
+
+    <!-- Satır 2: Süt -->
+    <rect x="0" y="40" width="600" height="40" fill="#F8FAFC"/>
+    <text x="20" y="65" font-size="16">🥛</text>
+    <text x="50" y="65" font-weight="bold" font-size="14" fill="#0F172A">Süt</text>
+    <rect x="180" y="50" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 206/240 * 250 = 214 -->
+    <rect x="180" y="50" width="214" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="65" font-weight="bold" font-size="14" fill="#0F172A">206 g</text>
+
+    <!-- Satır 3: Un -->
+    <rect x="0" y="80" width="600" height="40" fill="#FFFFFF"/>
+    <text x="20" y="105" font-size="16">🌾</text>
+    <text x="50" y="105" font-weight="bold" font-size="14" fill="#0F172A">Un</text>
+    <rect x="180" y="90" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 120/240 * 250 = 125 -->
+    <rect x="180" y="90" width="125" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="105" font-weight="bold" font-size="14" fill="#0F172A">120 g</text>
+
+    <!-- Satır 4: Şeker -->
+    <rect x="0" y="120" width="600" height="40" fill="#F8FAFC"/>
+    <text x="20" y="145" font-size="16">🧊</text>
+    <text x="50" y="145" font-weight="bold" font-size="14" fill="#0F172A">Toz Şeker</text>
+    <rect x="180" y="130" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 170/240 * 250 = 177 -->
+    <rect x="180" y="130" width="177" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="145" font-weight="bold" font-size="14" fill="#0F172A">170 g</text>
+
+    <!-- Satır 5: Pudra Şekeri -->
+    <rect x="0" y="160" width="600" height="40" fill="#FFFFFF"/>
+    <text x="20" y="185" font-size="16">❄️</text>
+    <text x="50" y="185" font-weight="bold" font-size="14" fill="#0F172A">Pudra Şekeri</text>
+    <rect x="180" y="170" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 112/240 * 250 = 116 -->
+    <rect x="180" y="170" width="116" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="185" font-weight="bold" font-size="14" fill="#0F172A">112 g</text>
+
+    <!-- Satır 6: Tuz -->
+    <rect x="0" y="200" width="600" height="40" fill="#F8FAFC"/>
+    <text x="20" y="225" font-size="16">🧂</text>
+    <text x="50" y="225" font-weight="bold" font-size="14" fill="#0F172A">Tuz</text>
+    <rect x="180" y="210" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 240/240 * 250 = 250 -->
+    <rect x="180" y="210" width="250" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="225" font-weight="bold" font-size="14" fill="#0F172A">240 g</text>
+
+    <!-- Satır 7: Tereyağı -->
+    <rect x="0" y="240" width="600" height="40" fill="#FFFFFF"/>
+    <text x="20" y="265" font-size="16">🧈</text>
+    <text x="50" y="265" font-weight="bold" font-size="14" fill="#0F172A">Tereyağı</text>
+    <rect x="180" y="250" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 182/240 * 250 = 189 -->
+    <rect x="180" y="250" width="189" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="265" font-weight="bold" font-size="14" fill="#0F172A">182 g</text>
+
+    <!-- Satır 8: Pirinç -->
+    <rect x="0" y="280" width="600" height="40" fill="#F8FAFC" rx="16"/>
+    <text x="20" y="305" font-size="16">🍚</text>
+    <text x="50" y="305" font-weight="bold" font-size="14" fill="#0F172A">Pirinç / Bakliyat</text>
+    <rect x="180" y="290" width="250" height="20" rx="4" fill="#E2E8F0"/>
+    <!-- 170/240 * 250 = 177 -->
+    <rect x="180" y="290" width="177" height="20" rx="4" fill="#2563EB"/>
+    <text x="440" y="305" font-weight="bold" font-size="14" fill="#0F172A">170 g</text>
+  </g>
+</svg>

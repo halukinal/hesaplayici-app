@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="font-family: system-ui, sans-serif;">
+  <title>Kaşık Boyutları Karşılaştırması</title>
+  <desc>Çay, tatlı ve yemek kaşıklarının gerçekçi oransal karşılaştırması.</desc>
+
+  <rect width="400" height="200" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Çay Kaşığı (5ml) -->
+  <g transform="translate(60, 60)">
+    <path d="M0,0 C-5,-15 15,-15 20,-5 L50,-5 L50,5 L20,5 C15,15 -5,15 0,0" fill="none" stroke="#64748B" stroke-width="2" transform="scale(0.8) rotate(-45)"/>
+    <text x="0" y="60" text-anchor="middle" font-weight="bold" font-size="14" fill="#0F172A">Çay Kaşığı</text>
+    <text x="0" y="80" text-anchor="middle" font-size="12" fill="#64748B">5 ml</text>
+    <rect x="-20" y="100" width="40" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="-20" y="100" width="13" height="8" rx="4" fill="#2563EB"/>
+    <text x="0" y="125" text-anchor="middle" font-size="10" fill="#94A3B8">(En küçük)</text>
+  </g>
+
+  <!-- Tatlı Kaşığı (10ml) -->
+  <g transform="translate(200, 50)">
+    <path d="M0,0 C-8,-20 20,-20 25,-5 L60,-5 L60,5 L25,5 C20,20 -8,20 0,0" fill="none" stroke="#64748B" stroke-width="2" transform="scale(1) rotate(-45)"/>
+    <text x="0" y="70" text-anchor="middle" font-weight="bold" font-size="14" fill="#0F172A">Tatlı Kaşığı</text>
+    <text x="0" y="90" text-anchor="middle" font-size="12" fill="#64748B">10 ml</text>
+    <rect x="-30" y="110" width="60" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="-30" y="110" width="26" height="8" rx="4" fill="#2563EB"/>
+    <text x="0" y="135" text-anchor="middle" font-size="10" fill="#94A3B8">(Orta)</text>
+  </g>
+
+  <!-- Yemek Kaşığı (15ml) -->
+  <g transform="translate(340, 40)">
+    <path d="M0,0 C-10,-25 25,-25 30,-5 L70,-5 L70,5 L30,5 C25,25 -10,25 0,0" fill="none" stroke="#64748B" stroke-width="2" transform="scale(1.2) rotate(-45)"/>
+    <text x="0" y="80" text-anchor="middle" font-weight="bold" font-size="14" fill="#0F172A">Yemek Kaşığı</text>
+    <text x="0" y="100" text-anchor="middle" font-size="12" fill="#64748B">15 ml</text>
+    <rect x="-40" y="120" width="80" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="-40" y="120" width="40" height="8" rx="4" fill="#2563EB"/>
+    <text x="0" y="145" text-anchor="middle" font-size="10" fill="#94A3B8">(En büyük)</text>
+  </g>
+</svg>
