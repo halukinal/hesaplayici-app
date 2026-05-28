@@ -2,7 +2,7 @@
 
 import {useTranslations, useLocale} from 'next-intl';
 import Link from 'next/link';
-import {Heart, DollarSign, ChefHat, Scissors, Calculator, Calendar, ChevronRight} from 'lucide-react';
+import {Heart, DollarSign, ChefHat, Scissors, Calculator, Calendar, Home, ChevronRight} from 'lucide-react';
 import type {CalculatorCategory, CalculatorEntry} from '@/lib/registry';
 
 interface CategoryInfo {
@@ -20,6 +20,7 @@ const CATEGORIES: CategoryInfo[] = [
   {id: 'el-sanatlari', icon: Scissors, titleKey: 'categories.el-sanatlari', descKey: 'categories.el-sanatlariDesc', color: 'text-purple-500'},
   {id: 'genel', icon: Calculator, titleKey: 'categories.genel', descKey: 'categories.genelDesc', color: 'text-[#2563EB]'},
   {id: 'zaman', icon: Calendar, titleKey: 'categories.zaman', descKey: 'categories.zamanDesc', color: 'text-cyan-600'},
+  {id: 'ev', icon: Home, titleKey: 'categories.ev', descKey: 'categories.evDesc', color: 'text-amber-600'},
 ];
 
 interface Props {

@@ -45,6 +45,46 @@ export const routing = defineRouting({
       tr: '/el-sanatlari/orgu-maliyet-hesaplayici',
       en: '/crafts/knitting-cost-calculator',
     },
+    '/genel/yuzde-hesaplama': {
+      tr: '/genel/yuzde-hesaplama',
+      en: '/general/percentage-calculator',
+    },
+    '/zaman/yas-hesaplayici': {
+      tr: '/zaman/yas-hesaplayici',
+      en: '/time/age-calculator',
+    },
+    '/el-sanatlari/ip-yumak-hesaplayici': {
+      tr: '/el-sanatlari/ip-yumak-hesaplayici',
+      en: '/crafts/yarn-amount-calculator',
+    },
+    '/el-sanatlari/kumas-hesaplayici': {
+      tr: '/el-sanatlari/kumas-hesaplayici',
+      en: '/crafts/fabric-amount-calculator',
+    },
+    '/el-sanatlari/duvar-kagidi-boya-hesaplayici': {
+      tr: '/el-sanatlari/duvar-kagidi-boya-hesaplayici',
+      en: '/crafts/wallpaper-paint-calculator',
+    },
+    '/zaman/tarih-farki-hesaplayici': {
+      tr: '/zaman/tarih-farki-hesaplayici',
+      en: '/time/date-difference-calculator',
+    },
+    '/zaman/is-gunu-hesaplayici': {
+      tr: '/zaman/is-gunu-hesaplayici',
+      en: '/time/work-days-calculator',
+    },
+    '/ev/elektrik-faturasi-hesaplayici': {
+      tr: '/ev/elektrik-faturasi-hesaplayici',
+      en: '/home/electricity-bill-calculator',
+    },
+    '/ev/kira-artis-hesaplayici': {
+      tr: '/ev/kira-artis-hesaplayici',
+      en: '/home/rent-increase-calculator',
+    },
+    '/genel/not-ortalama-hesaplayici': {
+      tr: '/genel/not-ortalama-hesaplayici',
+      en: '/general/grade-average-calculator',
+    },
   },
 });
 
