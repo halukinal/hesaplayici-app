@@ -1,5 +1,6 @@
 import {getTranslations} from 'next-intl/server';
 import type {Metadata} from 'next';
+import FavoritesList from '@/components/favorites/FavoritesList';
 
 type Props = {params: Promise<{locale: string}>};
 
@@ -14,8 +15,8 @@ export default async function FavoritesPage({params}: Props) {
   const t = await getTranslations({locale, namespace: 'nav'});
   return (
     <div className="max-w-2xl mx-auto px-4 py-8 pb-28">
-      <h1 className="text-2xl font-bold text-[#0F172A] mb-4">{t('favorites')}</h1>
-      <p className="text-[#64748B]">Favori hesaplayıcılarınız burada görünecek.</p>
+      <h1 className="text-2xl font-bold text-[#0F172A] mb-6">{t('favorites')}</h1>
+      <FavoritesList />
     </div>
   );
 }

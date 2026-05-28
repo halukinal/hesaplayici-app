@@ -36,9 +36,46 @@
     "amountPositive": "Tutar sıfırdan büyük olmalı",
     "amountTooLarge": "Tutar çok büyük",
     "invalidRate": "Geçersiz oran",
+    "cannotDivideByZero": "Sıfıra bölme yapılamaz",
     "noResults": "Sonuç bulunamadı",
     "comingSoon": "Yakında",
     "backToHome": "Ana Sayfaya Dön"
+  },
+  "percentage": {
+    "metaTitle": "Yüzde Hesaplama — Kolay Yüzdelik Oran Bulma",
+    "metaDescription": "Yüzde hesaplama işlemlerini anında yapın: Bir sayının yüzde X'ini bulun, iki sayı arasındaki yüzde oranını veya yüzde değişimini hesaplayın.",
+    "title": "Yüzde Hesaplayıcı",
+    "description": "Her türlü yüzde hesaplama işlemini hızlıca yapın.",
+    "modeLabel": "Hesaplama Türü",
+    "modeFindValue": "A sayısının %B'si kaçtır?",
+    "modeFindPercentage": "A sayısı, B sayısının yüzde kaçıdır?",
+    "modeFindChange": "A'dan B'ye değişim (artış/azalış) yüzde kaçtır?",
+    "valueA": "A Sayısı",
+    "valueB": "B Sayısı",
+    "percentageB": "%B (Yüzde)",
+    "resultTitle": "Hesaplama Sonucu",
+    "resultValue": "Sonuç:",
+    "resultIncrease": "Artış:",
+    "resultDecrease": "Azalış:",
+    "contentTitle": "Yüzde Nasıl Hesaplanır?",
+    "contentBody1": "Yüzde hesaplamaları günlük hayatta, alışverişte indirimleri hesaplarken, ticarette kâr-zarar oranlarını belirlerken veya verilerdeki değişimleri incelerken sıklıkla kullanılır. Matematiksel olarak 'yüzde', bir bütünün 100 eşit parçaya bölünmesiyle elde edilen birimi ifade eder.",
+    "contentBody2": "Hesaplayıcımız üç farklı temel yüzde işlemini tek bir ekranda sunar: Bir sayının belirli bir yüzdesini bulma, bir sayının diğerinin yüzde kaçı olduğunu bulma ve iki sayı arasındaki oransal değişimi (artış veya azalış) hesaplama.",
+    "contentBody3": "Bu aracı, indirimli fiyatları hesaplamak, faiz oranlarını anlamak veya büyüme hedeflerinizi değerlendirmek için kullanabilirsiniz. Tüm hesaplamalar anında ve cihazınızda yerel olarak yapılır.",
+    "formulaTitle": "Yüzde Hesaplama Formülleri",
+    "formulaFindValue": "A sayısının %B'si: (A × B) / 100",
+    "formulaFindPercentage": "A, B'nin yüzde kaçıdır: (A / B) × 100",
+    "formulaFindChange": "A'dan B'ye değişim: ((B - A) / |A|) × 100",
+    "formulaSource": "Bu formüller evrensel matematik prensiplerine dayanmaktadır.",
+    "faq1q": "Bir ürünün %20 indirimli fiyatı nasıl hesaplanır?",
+    "faq1a": "Öncelikle ürünün fiyatının %20'sini bulup (Fiyat × 20 / 100), ardından bu değeri asıl fiyattan çıkarabilirsiniz. Alternatif olarak, fiyatı doğrudan 0.80 ile çarparak da indirimli fiyatı bulabilirsiniz.",
+    "faq2q": "Yüzde artış nasıl hesaplanır?",
+    "faq2a": "Yeni değerden eski değeri çıkarın. Çıkan sonucu eski değere bölün ve 100 ile çarpın. Sonuç pozitifse artış, negatifse azalışı gösterir.",
+    "faq3q": "KDV hesaplamak için yüzde aracı kullanılabilir mi?",
+    "faq3a": "Evet, örneğin KDV oranı %20 ise, net fiyata %20 eklemek için 'A'dan B'ye artış' veya doğrudan KDV hesaplayıcımızı kullanabilirsiniz.",
+    "faq4q": "Sıfır üzerinden yüzde hesaplanabilir mi?",
+    "faq4a": "Bir sayının yüzde sıfırı her zaman sıfırdır. Ancak, matematikte sıfıra bölme işlemi tanımsız olduğu için 'A sayısı 0'ın yüzde kaçıdır?' gibi bir işlem yapılamaz.",
+    "faq5q": "100'den büyük bir yüzde değeri olabilir mi?",
+    "faq5a": "Evet. Örneğin, bir değerin %150'sini bulmak, o değerin 1.5 katını bulmak demektir. %100'den büyük artışlar, değerin iki katına veya daha fazlasına çıkmasını ifade eder."
   },
   "legal": {
     "privacy": "Gizlilik Politikası",
@@ -61,6 +98,14 @@
     "dismiss": "Şimdi Değil",
     "iosGuideTitle": "Ana Ekrana Ekle",
     "iosGuide": "Safari'de Paylaş butonuna dokunun, ardından \"Ana Ekrana Ekle\" seçeneğini seçin."
+  },
+  "favorites": {
+    "empty": "Henüz favori hesaplayıcınız yok.",
+    "open": "Aç"
+  },
+  "records": {
+    "empty": "Henüz kayıtlı hesaplamanız yok.",
+    "delete": "Kaydı sil"
   },
   "home": {
     "title": "Hesapla",

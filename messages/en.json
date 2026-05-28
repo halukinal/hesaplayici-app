@@ -62,6 +62,14 @@
     "iosGuideTitle": "Add to Home Screen",
     "iosGuide": "Tap the Share button in Safari, then select \"Add to Home Screen\"."
   },
+  "favorites": {
+    "empty": "You have no favorite calculators yet.",
+    "open": "Open"
+  },
+  "records": {
+    "empty": "You have no saved calculations yet.",
+    "delete": "Delete record"
+  },
   "home": {
     "title": "Hesapla",
     "subtitle": "Practical tools for your everyday calculations",
